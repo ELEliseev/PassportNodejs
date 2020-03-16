@@ -1,0 +1,47 @@
+@charset "utf-8";
+body {
+text-align: center;
+
+}
+
+@keyframes glowing {
+	0% { background-color: #7FFF00; box-shadow: 0 0 2px #074673; }
+	50% { background-color: #FFD700; box-shadow: 0 0 9px #0e87de; }
+	100% { background-color: 	#FF0000; box-shadow: 0 0 2px #094d7d; }
+}
+
+@keyframes glowing2 {
+	0% { border:thick solid #7FFF00; box-shadow: 0 0 2px #074673; background-image: url(/img/lift.jpg);}
+	50% { border:thick solid #FFD700; box-shadow: 0 0 9px #0e87de; background-image: url(/img/zlo.jpg);}
+	100% { border:thick solid #FF0000; box-shadow: 0 0 2px #094d7d; background-image: url(/img/lift.jpg);}
+}
+.lift {
+	background-image: url(/img/lift.jpg);
+	float: left;
+	height: 250px;
+	width: 200px;
+	border: thick solid #41D965;
+	margin: 20px;
+	
+	opacity: 1;
+}
+.liftactive {
+	animation: glowing2 1500ms infinite;
+	background-image: url(/img/lift.jpg);
+	float: left;
+	height: 250px;
+	width: 200px;
+	
+	margin: 20px;
+	
+	opacity: 1;
+}
+.addres {
+	color: #FF0004;
+	background-color: #48DAFF;
+	opacity: 1;
+	border: thin solid #3F8BFF;
+	width: 199px;
+	height: 20px;
+	margin-top: 230px;
+}

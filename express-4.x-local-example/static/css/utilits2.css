@@ -1,0 +1,330 @@
+body {
+    background-image: url(/img/background.jpg);
+
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    font: 13px/1.4 Arial,
+        sans-serif;
+
+}
+
+#reboot_form {
+    position: relative;
+    left: 10px;
+
+}
+
+/* #lift_form {
+    position: absolute;
+    top: 100px;
+    left: 5px;
+
+} */
+/* #lift_form {
+    font-size: 20;
+} */
+
+#sendjson {
+
+    display: inline;
+
+}
+
+#read {
+
+    display: inline;
+
+}
+
+/* #ajax_form {
+    font-size: 15;
+    position: absolute;
+    top: 0px;
+    left: 500px;
+} */
+
+/* #rem_form {
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+} */
+
+.Form {
+    position: relative;
+}
+
+/***********************меню*************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0094D6;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    padding: 7px 0;
+}
+
+/* h1 {
+    font-size: 21px;
+    font-weight: normal;
+    margin: 0 0 30px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 25px;
+} */
+
+.text {
+    max-width: 700px;
+    margin: 0 0 30px;
+    background: #FFF;
+    border: 2px solid #7DCA86;
+    border-radius: 5px;
+    padding: 7px 15px;
+    box-sizing: border-box;
+}
+
+.tabs {
+    max-width: 100%;
+    /* margin: 0 0 30px; */
+    margin: 30px;
+}
+
+.tabs__caption {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    margin: -1px 0 0 -1px;
+}
+
+.tabs__caption li:last-child:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: -2px;
+    z-index: -1;
+    height: 5px;
+    background: #7DCA86;
+}
+
+.tabs__caption:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.tabs__caption li {
+    padding: 9px 15px;
+    margin: 1px 0 0 1px;
+    background: #61AF6A;
+    color: #FFF;
+    position: relative;
+    border: solid #61AF6A;
+    border-width: 2px 2px 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.tabs__caption li:not(.active) {
+    cursor: pointer;
+}
+
+.tabs__caption li:not(.active):hover {
+    background: #7DCA86;
+    border-color: #7DCA86;
+}
+
+.tabs__caption .active {
+    background: #FFF;
+    color: #000;
+    border-color: #7DCA86;
+}
+
+.tabs__caption .active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #FFF;
+}
+
+.tabs__content {
+    display: none;
+    background: #FFF;
+    border: 2px solid #7DCA86;
+    border-radius: 0 5px 5px 5px;
+    padding: 7px 15px;
+}
+
+.tabs__content.active {
+    display: block;
+}
+
+/******************************mod window****************************************/
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    margin: 2% 25% 0 25%;
+    width: 40%;
+    height: 40%;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(/img/img8.jpg);
+    padding: 50px 50px;
+    text-align: center;
+}
+
+.popup1 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    margin: 2% 25% 0 25%;
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(/img/img8.jpg);
+    padding: 50px 50px;
+    text-align: center;
+}
+
+#TableRebootVS,
+#TableDel,
+#TableEdit,
+#TableAdd,
+#UserAdd,
+#UserDel,
+#UserEdit,
+#ConfEdit,
+#GeoAdd,
+#GeoEdit {
+    text-align: left;
+}
+
+/* .object,
+.objectDel {
+    background-image: url(/img/img8.jpg);
+    padding: 50px 50px;
+} */
+
+.UserClass {
+    position: relative;
+    margin-left: 1em;
+    width: 200px;
+    height: 45px;
+    background-image: url(/img/img8.jpg);
+}
+
+#AddLift,
+#PackLift,
+#EditLift,
+#DelLift,
+#RebootLiftVS,
+#RebootVS,
+#RebootLiftAll,
+#RebootAll,
+#sendform,
+#editform,
+#removeform,
+#Exit,
+#ExitEdit,
+#ExitDel,
+#ExitPack,
+#ExitRebootVS,
+#ExitRebootAll,
+#read,
+#sendjson,
+#AddUser,
+#EditUser,
+#DelUser,
+#AddUser,
+#AddUserRec,
+#EditUserRec,
+#DelUserRec,
+#ExitAddUser,
+#DelUserRec,
+#ExitDelUser,
+#ExitEditUser,
+#EditConf,
+#EditConfRec,
+#ExitEditConf,
+#AddGeo,
+#EditGeo,
+#DelGeo,
+#AddGeoRec,
+#ExitAddGeo,
+#EditGeoRec,
+#ExitEditGeo,
+#DelGeoRec,
+#ExitDelGeo,
+#PackGeo {
+    position: relative;
+    margin-left: 1em;
+    width: 200px;
+    height: 45px;
+    background-image: url(/img/img8.jpg);
+}
+
+#textarea,
+#textarea1,
+#textarea2 {
+    /* position: relative; */
+    background-image: url(/img/img8.jpg);
+    width: 80%;
+    /* height: 40%; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.BtnSend {
+    text-align: center;
+}
+
+#inf,
+#infEdit,
+#infRebootVS,
+#infAddUser,
+#infDelUser,
+#infEditUser,
+#infEditConf,
+#infAddGeo,
+#infEditGeo,
+#infDelGeo {
+    display: inline;
+    /* -webkit-animation: pulsate 1.2s linear infinite; */
+    animation: blink 400ms alternate infinite;
+    vertical-align: top;
+    position: relative;
+    text-decoration: underline;
+    color: rgb(189, 3, 3);
+    top: 0px;
+    right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 0px solid #797676;
+    margin: 0em;
+}

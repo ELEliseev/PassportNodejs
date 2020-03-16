@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    touch-action: none;
+    margin: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    /* background-image: url(/img/background.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(/img/background.jpg);
+}
+
+/* Стили для нашей кнопки */
+#BtnSend {
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 20px;
+    background-color: #55acee;
+    box-shadow: 0px 5px 0px 0px #3C93D5;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    width: 200px;
+}
+
+#BtnSend:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+#BtnSend:focus {
+    outline: none !important
+}
+
+.BtnSend {
+    text-align: center;
+}
+
+.popup {
+    display: none;
+    position: relative;
+    z-index: 1000;
+    margin: 2% 25% 0 25%;
+    width: 50%;
+    height: 60%;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.object {
+    background-image: url(/img/img8.jpg);
+    padding: 50px 50px;
+}

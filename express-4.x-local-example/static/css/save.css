@@ -1,0 +1,28 @@
+body {
+    background-image: url(/img/background.jpg);
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.divframe {
+    width: 800px;
+    height: 600px;
+    top: 5%;
+    left: 25%;
+    position: absolute;
+    z-index: 2;
+    display:none;
+   
+}
+.iframe{
+    width:100%;
+    height: 100%;
+}
+.close{
+    display: block;
+}
+.display{
+    width:100%;
+}

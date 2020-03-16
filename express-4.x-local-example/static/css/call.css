@@ -1,0 +1,29 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.call {
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.pict {
+
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+}
+html {
+	cursor: none !important;
+}
