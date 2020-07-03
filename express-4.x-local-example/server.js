@@ -3,7 +3,7 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var users = require('./users.js');
 var cookieParser = require('cookie-parser');
-
+var connectEnsureLogin = require("connect-ensure-login")
 // Configure the local strategy for use by Passport.
 //
 // The local strategy require a `verify` function which receives the credentials
@@ -59,7 +59,7 @@ app.set('view engine', 'ejs');
 
 // Use application-level middleware for common functionality, including
 // logging, parsing, and session handling.
-app.use(require('morgan')('combined'));
+// app.use(require('morgan')('combined'));
 app.use(require('body-parser').urlencoded({
   extended: true
 }));
@@ -93,6 +93,7 @@ app.post('/login',
   }),
   function (req, res) {
     res.redirect('/profile');
+    //res.sendFile(__dirname + '/login.html');
   });
 
 app.get('/logout',
@@ -102,16 +103,20 @@ app.get('/logout',
   });
 
 app.get('/profile',
-  require('connect-ensure-login').ensureLoggedIn(),
+  connectEnsureLogin.ensureLoggedIn(),
   function (req, res) {
-    res.cookie('skumbria.sid', Math.random(), {
-      maxAge: 900000,
-      httpOnly: true
+    // res.cookie('skumbria.sid', Math.random(), {
+    //   maxAge: 900000,
+    //   httpOnly: true
+    // });
+    // 
+    res.render('profile', {
+      user: req.user
     });
-    res.sendFile(__dirname + '/login.html')
-    console.log("Cookies: ", req.cookies)
-    req.session.cookie = req.cookies
-    console.log(req.session)
+    // res.sendFile(__dirname + '/login.html');
+    // console.log("Cookies: ", req.cookies)
+    // req.session.cookie = req.cookies
+    console.log(req.user)
 
   })
 
